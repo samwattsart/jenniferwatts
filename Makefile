@@ -1,14 +1,16 @@
 MAIN=.
 src=$(MAIN)/dev
 materialize = $(MAIN)/node_modules/materialize-css
+uglifydir = $(MAIN)/node_modules/uglifyjs/bin
+nodesassdir = $(MAIN)/node_modules/node-sass/bin
 
 all: css/app.css js/app.js fonts/*
 
 css/app.css:
-	sass --scss $(src)/app.scss > $(MAIN)/css/app.css
+	$(nodesassdir)/node-sass --output-style compressed $(src)/app.scss > $(MAIN)/css/app.css
 
 js/app.js:
-	uglifyjs $(materialize)/bin/materialize.js $(src)/app.js > $(MAIN)/js/app.js
+	$(uglifydir)/uglifyjs $(materialize)/bin/materialize.js $(src)/app.js > $(MAIN)/js/app.js
 
 fonts/*:
 	cp $(materialize)/font/roboto/* $(MAIN)/font/roboto/

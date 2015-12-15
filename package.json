@@ -4,6 +4,8 @@
   "description": "Jenny Watts' site",
   "main": "index.html",
   "dependencies": {
+    "materialize-css": "^0.97.3",
+    "node-sass": "^3.4.2",
     "uglifyjs": "^2.4.10"
   },
   "devDependencies": {},
