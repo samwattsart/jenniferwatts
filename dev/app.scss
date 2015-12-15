@@ -1,0 +1,31 @@
+@import "../node_modules/materialize-css/sass/materialize.scss";
+
+body {
+	.container {
+		p {
+			color: white;
+		}
+	}
+  #piano_bg {
+    background-image: url("/img/piano.jpeg");
+    background-size: 100% auto;
+    min-height: 500px;
+    height: auto;
+
+    nav {
+      background-color: transparent;
+      box-shadow: none;
+      height: 96px;
+
+      .brand-logo {
+        margin: 10px;
+      }
+    }
+  }
+  #hands_bg {
+    background-image: url("/img/hands.jpeg");
+    background-size: 100% auto;
+    min-height: 500px;
+    height: auto;
+  }
+}
