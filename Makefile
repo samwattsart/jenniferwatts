@@ -7,7 +7,7 @@ nodesassdir = $(MAIN)/node_modules/node-sass/bin
 all: css/app.css js/app.js fonts/*
 
 css/app.css:
-	$(nodesassdir)/node-sass --output-style compressed $(src)/app.scss > $(MAIN)/css/app.css
+	$(nodesassdir)/node-sass $(src)/app.scss > $(MAIN)/css/app.css
 
 js/app.js:
 	$(uglifydir)/uglifyjs $(materialize)/bin/materialize.js $(src)/app.js > $(MAIN)/js/app.js

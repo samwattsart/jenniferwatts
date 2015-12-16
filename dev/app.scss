@@ -1,11 +1,12 @@
 @import "../node_modules/materialize-css/sass/materialize.scss";
 
 body {
-	.container {
-		p {
-			color: white;
-		}
-	}
+  color: white;
+  .parallax-container {
+    .section {
+      width: 100%;
+    }
+  }
   #piano_bg {
     background-image: url("/img/piano.jpeg");
     background-size: 100% auto;
