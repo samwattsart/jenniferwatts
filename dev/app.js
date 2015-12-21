@@ -2,6 +2,9 @@ $( document ).ready(function(){
   $(".button-collapse").sideNav();
   $('.parallax').parallax();
   $('.scrollspy').scrollSpy();
+  $('.side-nav li a').click(function() {
+    $('.button-collapse').sideNav('hide');
+  });
 
 	$(function() { 
 		// Setup the player to autoplay the next track

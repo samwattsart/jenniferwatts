@@ -11,13 +11,14 @@ css/app.css:
 
 js/app.js:
 	$(uglifydir)/uglifyjs $(materialize)/bin/materialize.js $(src)/app.js > $(MAIN)/js/app.js
+	cp -r $(src)/audiojs $(MAIN)/js/audiojs
 
 fonts/*:
 	cp $(materialize)/font/roboto/* $(MAIN)/font/roboto/
 
 clean:
-	rm -f $(MAIN)/css/app.css
-	rm -f $(MAIN)/js/app.js
+	rm -f $(MAIN)/css/*
+	rm -f $(MAIN)/js/*
 	rm -f $(MAIN)/fonts/*
 
 build: movecss movejs movefonts

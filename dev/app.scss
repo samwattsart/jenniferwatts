@@ -17,9 +17,10 @@ body {
     }
   }
 
-  #piano_bg {
+  #about {
     background-image: url("/img/piano.jpeg");
-    background-size: 100% auto;
+    background-size: cover;
+		background-position: 100% 50%;
     min-height: 500px;
     height: auto;
 
@@ -132,4 +133,15 @@ body {
 			}
 		}
   }
+
+	.page-footer {
+		margin-top: 0px;
+		padding-top: 0px;
+		a {
+			&:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+	}
 }
