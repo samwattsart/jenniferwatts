@@ -19,3 +19,14 @@ clean:
 	rm -f $(MAIN)/css/app.css
 	rm -f $(MAIN)/js/app.js
 	rm -f $(MAIN)/fonts/*
+
+build: movecss movejs movefonts
+
+movecss:
+	$(nodesassdir)/node-sass $(src)/app.scss > $(MAIN)/css/app.css
+
+movejs:
+	cat $(materialize)/bin/materialize.js $(src)/app.js > $(MAIN)/js/app.js
+
+movefonts:
+	cp $(materialize)/font/roboto/* $(MAIN)/font/roboto/
