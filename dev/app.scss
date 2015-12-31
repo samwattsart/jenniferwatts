@@ -145,4 +145,11 @@ body {
 			}
 		}
 	}
+
+  @media only screen 
+  and (max-device-width : 480px) {
+    .page-footer {
+      font-size: 12px;
+    } 
+  }
 }
