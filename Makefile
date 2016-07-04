@@ -11,7 +11,6 @@ css/app.css:
 
 js/app.js:
 	$(uglifydir)/uglifyjs $(materialize)/bin/materialize.js $(src)/app.js > $(MAIN)/js/app.js
-	cp -r $(src)/audiojs $(MAIN)/js/audiojs
 
 fonts/*:
 	cp $(materialize)/font/roboto/* $(MAIN)/font/roboto/
@@ -28,7 +27,6 @@ movecss:
 
 movejs:
 	cat $(materialize)/bin/materialize.js $(src)/app.js > $(MAIN)/js/app.js
-	cp -r $(src)/audiojs $(MAIN)/js/audiojs
 
 movefonts:
 	cp $(materialize)/font/roboto/* $(MAIN)/font/roboto/
